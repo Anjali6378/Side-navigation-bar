@@ -1,0 +1,131 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  background: #f3f5f9;
+  margin: 0;
+}
+
+.Wrapper {
+  display: flex;
+  position: relative;
+}
+
+/* Sidebar */
+.Wrapper .sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 20px 20px 20px;
+  left: -250px; /* Hidden initially */
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.Wrapper .sidebar.active {
+  left: 0;
+}
+
+.Wrapper .sidebar h2 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.Wrapper .sidebar ul li {
+  padding: 15px;
+  
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.Wrapper .sidebar ul li a {
+  color: #bdb8d7;
+  display: block;
+}
+
+.Wrapper .sidebar ul li a .fa-solid {
+  width: 25px;
+}
+
+.Wrapper .sidebar ul li:hover {
+  background: #594f8d;
+}
+
+.Wrapper .sidebar ul li:hover a {
+  color: #fff;
+}
+
+/* Social media icons */
+.Wrapper .sidebar .social_media {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.Wrapper .sidebar .social_media a {
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+/* Main content */
+.Wrapper .main_content {
+  width: 100%;
+  margin-left: 0;
+  transition: margin-left 0.3s ease;
+  padding: 5px 20px 20px 20px;
+}
+
+.Wrapper .sidebar.active ~ .main_content {
+  margin-left: 200px;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 24px;
+  color: #4b4276;
+  padding: 10px 15px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Header & Info styling */
+.Wrapper .main_content .header {
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  font-weight: bold;
+}
+
+.Wrapper .main_content .info {
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+  font-size: 18px;
+}

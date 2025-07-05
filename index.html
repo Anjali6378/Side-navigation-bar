@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Side Navigation Bar</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="Wrapper">
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <h2>Main Menu</h2>
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i> Profile</a></li>
+        <li><a href="#"><i class="fa-solid fa-address-card"></i> About</a></li>
+        <li><a href="#"><i class="fa-solid fa-diagram-project"></i> Portfolio</a></li>
+        <li><a href="#"><i class="fa-solid fa-blog"></i> Blogs</a></li>
+        <li><a href="#"><i class="fa-solid fa-address-book"></i> Contacts</a></li>
+        <li><a href="#"><i class="fa-solid fa-map-pin"></i> Map</a></li>
+      </ul>
+      <div class="social_media">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main_content">
+
+      <!-- Hamburger icon (inside content, moves with it) -->
+      <div class="hamburger" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="banner"style="background-image: url('image.png');"></div>
+
+
+      <div class="header">Welcome, Have a nice day!</div>
+      <div class="section">
+       <h3>Learning Progress --></h3>
+       
+       <br>
+       <ul>
+         <li>HTML & CSS - Basics Completed</li>
+        <li> JavaScript - DOM Manipulation</li>
+        <li> Currently: Responsive Design</li>
+        <li> Next: JavaScript Projects</li>
+       </ul>
+      </div> 
+
+
+    </div>
+  </div>
+
+  <!-- Sidebar toggle script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
